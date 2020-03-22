@@ -1,0 +1,28 @@
+body {
+    margin: auto;
+    margin-top: 250px;
+    margin-bottom: 500px;
+}
+
+#main {
+    font-family: 'Bangers', cursive;
+    color: #552583;
+    font-size: 64px;
+    text-align: center;
+    text-decoration: underline #FDB927;
+}
+
+.descrip {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-outline-primary {
+    color: #552583;
+    border-color: #552583;
+}
+
+.btn-outline-primary:hover {
+    background-color: #FDB927;
+    border-color: #552583;
+}
