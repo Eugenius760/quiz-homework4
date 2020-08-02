@@ -9,26 +9,77 @@
     <link href="https://fonts.googleapis.com/css?family=Bangers|Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="high-score">View High Scores</div>
-    <div class="timer">
-        <p id="seconds"></p>
-    </div>
-    <div id="display">
-        <section class="start-page">
-            <h1 id="main">The Quiz of the Random</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" id="highScoreNav">High Scores</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <span class="navbar-nav ml-auto" id="timer">
+          </span>
+        </div>
+      </nav>
 
-            <div>
-                <article class="container col-md-6 descrip">
-                    <p>
-                        This is a quiz of random questions.<br>
-                        You'll have 90 secs to answer 8 questions.<br>
-                        Good luck and have fun!
-                    </p>
-                    <button type="button" class="btn btn-outline-primary" id="start-button">Start</button>
-                </article>
-            </div>
-        </section>
+  <!-- Quiz starting page -->
+  <div class="card text-center" id="welcomeMessage">
+    <div class="card-body">
+      <h5 class="wel-title">Darryl's Quiz</h5>
+      <p class="card-text">You will have 60 seconds to answer 5 questions. You can look at your high score after. Good luck! </p>
+      <button type="button" class="btn" id="startBtn">Start Quiz</button>
     </div>
-    <script src="./script.js"></script>
+  </div>
+  <!-- End Quiz starting page -->
+
+   <!-- High Score Form -->
+  <div class="card w-75" id="highScore">
+    <div class="card-body">
+      <p class="card-text"></p>
+      <h5 class="card-title" id="highScoreCardTitle"></h5>
+      <p>Enter your initials below to record your score.</p>
+      <form">
+        <div class="form-row align-items-center">
+          <div id="highScoreForm" class="col-md-6">
+            <label class="sr-only" for="inlineFormInput">Name</label>
+            <input type="text" class="form-control mb-2" id="inlineFormInput">
+          </div>
+          <div class="col-md-12">
+            <button type="submit" class="btn  mb-2" id="highScoreSubmit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- High Score Form -->
+
+  <!-- High Score View -->
+  <div class="card text-center" id="highScorePage">
+    <div class="card-body">
+      <h2 class="card-title" id="highScoreCard">High Scores</h2>
+      <pre class="card-text" id="initialsAndHighScore"></pre>
+      <button type="button" class="btn btn-outline-dark" id="restartBtn">Try Quiz Again</button>
+    </div>
+  </div>
+  <!-- High Score View End -->
+
+
+
+  <!-- Quiz Question Cards - initially hidden -->
+  <div class="card w-75" id="quizCard">
+    <div class="card-body">
+      <h5 class="card-title" id="quizCardTitle"></h5>
+      <p class="card-text" id="quizCardText"></p>
+      <button type="button" class="btn btn-outline-dark questionBtn" id="answer1"></button>
+      <br>
+      <button type="button" class="btn btn-outline-dark questionBtn" id="answer2"></button>
+      <br>
+      <button type="button" class="btn btn-outline-dark questionBtn" id="answer3"></button>
+      <br>
+      <button type="button" class="btn btn-outline-dark questionBtn" id="answer4"></button>
+    </div>
+      <p id="answerMessage"></p>
+      <button type="button" class="btn btn-outline-dark btn-lg" id="nextQuestionBtn">Next Question</button>
+  </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
